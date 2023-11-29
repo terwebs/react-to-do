@@ -7,9 +7,9 @@ import {Box} from "@mui/system"
 import { Typography } from '@mui/material';
 
 const sampleTodos = [
-  {id: uuidv4(), content: "This is a sample todo task", completed: false},
-  {id: uuidv4(), content: "Read first todo Task", completed: true},
-  {id: uuidv4(), content: "Delete me", completed: false},
+  {id: uuidv4(), content: "This is a sample to-do task", completed: false},
+  {id: uuidv4(), content: "Read previous to-do task", completed: true},
+  {id: uuidv4(), content: "Delete this task", completed: false},
 ]
 
 const getinitialData = () => {
@@ -59,9 +59,7 @@ export default function TodoList(){
         m: 4 
       }}
     >
-      <Typography variant="h2" component="h2">
-        To-Dos
-      </Typography>
+      <h1 className="title">Your To-do List</h1>
       <List sx={{ width: '100%', maxWidth: 500, bgcolor: 'background.paper' }}>
         {todos.map((todo) => {
           return (
@@ -75,6 +73,7 @@ export default function TodoList(){
         })}
         <NewTaskForm addTask={addTask} />
       </List>
+      <p className="credits">Created by Ter_Webs</p>
     </Box>
   )
 }

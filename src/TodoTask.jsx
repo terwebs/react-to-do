@@ -30,6 +30,11 @@ export default function TodoTask({todo, removeProp, toggleProp}){
                   disableRipple
                   inputProps={{ 'aria-labelledby': labelId }}
                   onChange={toggleProp}
+                  sx={{
+                    '&.Mui-checked': {
+                      color: "#90caf9",
+                    },
+                  }}
                 />
               </ListItemIcon>
               <ListItemText id={labelId} primary={todo.content}  />

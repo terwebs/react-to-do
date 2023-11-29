@@ -24,7 +24,7 @@ export default function NewTaskForm({ addTask }){
         <TextField 
           fullWidth
           id="standard-basic"
-          label="Add Task"
+          label="Add a task"
           variant="standard"
           onChange={handleChange}
           value={content}
